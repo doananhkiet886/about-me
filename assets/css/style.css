@@ -1,0 +1,519 @@
+/* Header */
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --primary-text-color: #fff;
+    --secondary-text-color: #000;
+    --header-text-color:  #fff;
+    --slider-text-color: #fff;
+    --about-text-color: #000;
+    --tour-places-text-color: #000;
+    --hover-btn-color: #ccc;
+    --transition-btn: 0.2s;
+}
+
+.mt8 {
+    margin-top: 8px !important;
+}
+
+.mt16 {
+    margin-top: 16px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt24 {
+    margin-top: 24px !important;
+}
+
+.mt32 {
+    margin-top: 32px !important;
+}
+
+.mt36 {
+    margin-top: 36px !important;
+}
+
+.mt40 {
+    margin-top: 40px !important;
+}
+
+.ml8 {
+    margin-left: 8px !important;
+}
+
+.ml16 {
+    margin-left: 16px !important;
+}
+
+.ml28 {
+    margin-left: 28px !important;
+}
+
+.mr2 {
+    margin-right: 4px !important;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col + .col {
+    margin-left: 16px;
+}
+
+.col-full {
+    width: 100%;   
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 33.333333%;
+}
+
+.col-4 {
+    width: 25%;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.box-block {
+    display: block;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.width-100-per {
+    width: 100% !important;
+}
+
+.btn {
+    font-size: 13px;
+    padding: 12px 24px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: inline-block;
+    transition: var(--transition-btn);
+}
+
+/* .btn-size-l {
+    padding: 15px 16px;
+} */
+
+.form-control {
+    font-size: 16px;
+    width: 100%;
+    padding: 8px;
+    border-color:rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+/* Begin: Header */
+.header {
+    color: var(--primary-text-color);
+    background-color: var(--primary-color);
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    z-index: 1;
+}
+
+.header .nav {
+    display: flex;
+}
+
+.nav .nav__item {
+
+}
+
+.nav .nav__item a {
+    font-weight: 520;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 46px;
+    padding: 0 24px;
+    transition: var(--transition-btn);
+}
+
+.nav .sub-nav__item:hover a,
+.nav .nav__item:hover > a {
+    color: #000;
+    background-color: var(--hover-btn-color);
+}
+
+.nav-item__sub-nav {
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.nav .nav__item:hover .nav-item__sub-nav {
+    display: block;
+}
+
+.nav .nav-item__sub-nav a {
+    text-transform: none;
+    display: block;
+    padding-left: 12px;
+    padding-right: 87px;
+    color: var(--secondary-text-color);
+}
+
+.header .mobile-menu-btn,
+.header .search-btn {
+    padding: 0 23px;
+    line-height: 46px;
+    transition: var(--transition-btn);
+    cursor: pointer;
+}
+
+.header .mobile-menu-btn:hover,
+.header .search-btn:hover {
+    background-color: #f44336;
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+/* End: Header */
+
+/* Begin: Container */
+.container {
+    margin-top: 46px;
+}
+
+/*Begin: Slider */
+.slider {
+    color: var(--slider-text-color);
+    position: relative;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.slider__desc {
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.slider__desc h3 {
+    font-size: 32px;
+}
+
+.slider__desc p {
+    font-size: 20px;
+}
+/*End: Slider */
+
+/* Content-section - Common class */
+.content-section {
+    color: var(--primary-text-color);
+    padding: 96px 16px;
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+}
+
+.content-section h2 {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.content-section > p {
+    font-style: italic;
+    opacity: 0.6;
+    padding: 16px;
+    text-align: center;
+}
+
+/* About */
+.about {
+    background-color: var(--secondary-color);
+}
+
+.about h2 {
+    color: var(--secondary-text-color)
+}
+
+.about p {
+    color: var(--secondary-text-color)
+}
+
+.about h3 {
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.about img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Begin: Tour */
+.tour {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+.tour__dates {
+    background-color: #fff;
+    margin-top: 16px;
+}
+
+.tour__dates li {
+    display: flex;
+    padding: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.tour__dates .date {
+    opacity: 0.6;
+}
+
+.tour__dates .date,
+.tour__dates .ticker {
+    padding: 4px 8px;
+}
+
+.tour__dates .ticker {
+    display: inline;
+    color: #fff;
+    background-color: #f44336;
+    margin-left: 20px;
+}
+
+.tour__places {
+    color: var(--secondary-text-color);
+    margin: 0 -8px;
+}
+
+.tour-places__item {
+    
+}
+
+.tour-places-item_content {
+    background-color: var(--secondary-color);
+    padding: 16px;
+}
+
+.tour-places__item img {
+    width: 100%;
+    height: 180px;
+    display: block;
+}
+
+.tour-places-item_content .content__title {
+    font-size: 16px;
+}
+
+.tour-places-item_content .content__date {
+    opacity: 0.6;
+    margin-top: 16px;
+}
+
+.tour-places-item_content .content__desc {  
+    margin-top: 16px;
+}
+
+.tour-places-item_content .btn:hover {
+    color: #000;
+    background-color: var(--hover-btn-color);
+    cursor: pointer;
+}
+
+/* End: About */
+
+/* Begin: Contact */
+.contact {
+    background-color: var(--secondary-color);
+}
+
+.contact h2,
+.contact p {
+
+    color: var(--secondary-text-color);
+}
+
+.contact .contact-info a {
+    color: #0040ff;
+    /* text-decoration: underline; */
+}
+
+.contact .contact-info a:hover {
+    opacity: 0.6;
+}
+
+.contact .contact-form button {
+    cursor: pointer;
+}
+
+
+.contact .contact-form button:hover {
+    opacity: 0.6;
+}
+/* End: Contact */
+
+
+.me-image img {
+    width: 100%;
+}
+/* End: Container */
+
+/* Footer */
+.footer {
+    padding: 48px 0;
+}
+
+.footer .social-networks {
+    text-align: center;
+    font-size: 28px;
+}
+
+.footer .social-networks a {
+    color: #000;
+    opacity: 0.6;
+    margin-left: 8px;
+    transition: 0.2s;
+}
+
+.footer .social-networks a:hover {
+    opacity: 1;
+}
+
+
+/* Begin: Modal */
+.js-open-modal {
+    display: flex !important;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__container {
+    width: 900px;
+    max-width: calc(100% - 32px);
+    position: relative;
+    animation: fadeInModalContainer 0.6s ease;
+}
+
+.modal-container__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 23px;
+    font-size: 20px;
+    line-height: 46px;
+    transition: var(--transition-btn);
+    cursor: pointer;
+}
+
+.modal-container__close:hover {
+    color: #fff;
+    background-color: #f44336;
+}
+
+.modal-container__header {
+    color: #fff;
+    background-color: #009688;
+    padding: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-container__header .comment-icon {
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.modal-container__header h2 {
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+.modal-container__body {
+    background-color: #fff;
+    padding: 16px; 
+}
+
+.modal-container__body .btn--color {
+   background-color: #009688;
+}
+
+.modal-container__body .btn--font-size {
+    font-size: 16px;
+}
+
+.modal-container__body .btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+/* End: Modal */
+
+@keyframes fadeInModalContainer {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
